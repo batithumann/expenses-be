@@ -5,6 +5,7 @@ import { UserEntity } from './users/entities/user.entity';
 import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
 import { ExpensesModule } from './expenses/expenses.module';
+import { AccountsModule } from './accounts/accounts.module';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { ExpensesModule } from './expenses/expenses.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '',
+      password: '925837',
       database: 'expenses',
       entities: [UserEntity],
       autoLoadEntities: true, // Automatically load entities
@@ -23,6 +24,7 @@ import { ExpensesModule } from './expenses/expenses.module';
     UsersModule,
     CategoriesModule,
     ExpensesModule,
+    AccountsModule,
   ],
 })
 export class AppModule {}
